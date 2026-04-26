@@ -1,0 +1,1194 @@
+{
+  "name": "Job Application Tracker",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 8
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -384,
+        -32
+      ],
+      "id": "7f047e36-143e-461a-aa7f-30661b5e07b2",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "url": "https://api.mycareersfuture.gov.sg/v2/jobs",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "search",
+              "value": "automation analyst"
+            },
+            {
+              "name": "limit",
+              "value": "20"
+            },
+            {
+              "name": "sortBy",
+              "value": "new_posting_date"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        -64,
+        -384
+      ],
+      "id": "90adeae9-1d9d-4bbd-9f0d-c4403a4ed78c",
+      "name": "HTTP Request 1"
+    },
+    {
+      "parameters": {
+        "url": "https://api.mycareersfuture.gov.sg/v2/jobs",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "search",
+              "value": "AI engineer"
+            },
+            {
+              "name": "limit",
+              "value": "20"
+            },
+            {
+              "name": "sortBy",
+              "value": "new_posting_date"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        -80,
+        -208
+      ],
+      "id": "f4deb670-a929-4cdb-9cbc-ddcfd92ec468",
+      "name": "HTTP Request 2"
+    },
+    {
+      "parameters": {
+        "url": "https://api.mycareersfuture.gov.sg/v2/jobs",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "search",
+              "value": "AI automation"
+            },
+            {
+              "name": "limit",
+              "value": "20"
+            },
+            {
+              "name": "sortBy",
+              "value": "new_posting_date"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        -96,
+        -16
+      ],
+      "id": "03a6bc14-cb69-4cd3-a4da-065cc8e55e89",
+      "name": "HTTP Request 3"
+    },
+    {
+      "parameters": {
+        "url": "https://api.mycareersfuture.gov.sg/v2/jobs",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "search",
+              "value": "process automation"
+            },
+            {
+              "name": "limit",
+              "value": "20"
+            },
+            {
+              "name": "sortBy",
+              "value": "new_posting_date"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        -96,
+        176
+      ],
+      "id": "3bbbd52e-193e-4387-9173-83cc5ceae6a0",
+      "name": "HTTP Request 4"
+    },
+    {
+      "parameters": {
+        "url": "https://api.mycareersfuture.gov.sg/v2/jobs",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "search",
+              "value": "data operations"
+            },
+            {
+              "name": "limit",
+              "value": "20"
+            },
+            {
+              "name": "sortBy",
+              "value": "new_posting_date"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        -96,
+        368
+      ],
+      "id": "d8dc51b7-48e6-406f-8fec-db7431cbc9d7",
+      "name": "HTTP Request 5"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "results",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        144,
+        -384
+      ],
+      "id": "e8a16354-e8ec-492b-9e0a-8551d63407a1",
+      "name": "Split Out 1"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "results",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        160,
+        -208
+      ],
+      "id": "ca6b9c25-b667-42a7-8dd5-3f7b90c7ce8a",
+      "name": "Split Out 2"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "results",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        160,
+        -16
+      ],
+      "id": "e549f9c3-f2d8-455b-ab95-75cde8da142a",
+      "name": "Split Out 3"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "results",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        144,
+        176
+      ],
+      "id": "976f8924-e7cb-4276-ba4e-3da25e1a0127",
+      "name": "Split Out 4"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "results",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        160,
+        368
+      ],
+      "id": "bc0fa7dd-51b8-4317-88e0-e242ff246cb2",
+      "name": "Split Out 5"
+    },
+    {
+      "parameters": {
+        "numberInputs": 5
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        512,
+        -32
+      ],
+      "id": "c1390d85-c86f-44f1-9255-16f3537bc034",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "compare": "selectedFields",
+        "fieldsToCompare": "uuid",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.removeDuplicates",
+      "typeVersion": 2,
+      "position": [
+        720,
+        16
+      ],
+      "id": "272d6dca-325a-4b39-ad5f-c63f06461f10",
+      "name": "Remove Duplicates"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        992,
+        16
+      ],
+      "id": "7a460290-a12b-4b74-b925-36e58e3c49b1",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json.request_body }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        1440,
+        96
+      ],
+      "id": "102ebfd3-9893-433c-b792-7ef513e449df",
+      "name": "AI Scorer",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "i4RC9av9M5yDOFwR",
+          "name": "Header Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const content = $input.item.json.content[0].text;\n\n// Remove markdown fences if present\nlet cleaned = content.trim();\nif (cleaned.startsWith(\"```\")) {\n  cleaned = cleaned.replace(/```json\\n?/g, '').replace(/```\\n?/g, '').trim();\n}\n\n// Parse the JSON\nconst parsed = JSON.parse(cleaned);\n\n// Merge with original job data from two steps back\nconst jobData = $('Loop Over Items').item.json;\n\nreturn {\n  json: {\n    job_title: jobData.title,\n    company: jobData.postedCompany?.name || 'Unknown',\n    url: jobData.metadata?.jobDetailsUrl || '',\n    platform: 'MyCareersFuture',\n    date_found: new Date().toISOString().split('T')[0],\n    fit_score: parsed.fit_score,\n    salary_range: parsed.salary_range,\n    missing_skills: parsed.missing_skills,\n    red_flags: parsed.red_flags,\n    ai_summary: parsed.ai_summary\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1648,
+        16
+      ],
+      "id": "952f69b8-fda0-4e98-b78d-e2882a17bb55",
+      "name": "Parse AI Response"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "6296f239-fd2e-4b7d-a185-4f2c9254d5a9",
+              "leftValue": "={{ $json.fit_score }}",
+              "rightValue": 7,
+              "operator": {
+                "type": "number",
+                "operation": "gte"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        1840,
+        -16
+      ],
+      "id": "70b432e6-fb9c-41b0-a6dc-cb2378d8102c",
+      "name": "Hot Lead Filter"
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "base": {
+          "__rl": true,
+          "value": "appaAfOeD82f57tts",
+          "mode": "list",
+          "cachedResultName": "Job Application Tracker",
+          "cachedResultUrl": "https://airtable.com/appaAfOeD82f57tts"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblKf7Y6gmx30WjBD",
+          "mode": "list",
+          "cachedResultName": "Hot Leads",
+          "cachedResultUrl": "https://airtable.com/appaAfOeD82f57tts/tblKf7Y6gmx30WjBD"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "job_title": "={{ $json.job_title}}",
+            "company": "={{ $json.company }}",
+            "url": "={{ $json.url }}",
+            "platform": "={{ $json.platform }}",
+            "fit_score": "={{ $json.fit_score }}",
+            "salary_range": "={{ $json.salary_range }}",
+            "missing_skills": "={{ $json.missing_skills }}",
+            "red_flags": "={{ $json.red_flags }}",
+            "ai_summary": "={{ $json.ai_summary }}",
+            "date_found": "={{ new Date($json.date_found).toISOString() }}"
+          },
+          "matchingColumns": [
+            "url"
+          ],
+          "schema": [
+            {
+              "id": "job_title",
+              "displayName": "job_title",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "company",
+              "displayName": "company",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "platform",
+              "displayName": "platform",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "url",
+              "displayName": "url",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "salary_range",
+              "displayName": "salary_range",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "location",
+              "displayName": "location",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "fit_score",
+              "displayName": "fit_score",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "missing_skills",
+              "displayName": "missing_skills",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "red_flags",
+              "displayName": "red_flags",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "date_found",
+              "displayName": "date_found",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "dateTime",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "status",
+              "displayName": "status",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [],
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "ai_summary",
+              "displayName": "ai_summary",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        2112,
+        -256
+      ],
+      "id": "0aa12214-efcf-4ae6-87fa-09a21ed8e2e3",
+      "name": "Hot Leads",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "vIR39ldQF4M6NzqZ",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "base": {
+          "__rl": true,
+          "value": "appaAfOeD82f57tts",
+          "mode": "list",
+          "cachedResultName": "Job Application Tracker",
+          "cachedResultUrl": "https://airtable.com/appaAfOeD82f57tts"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tbl1LXA05qiyKUooD",
+          "mode": "list",
+          "cachedResultName": "Archive",
+          "cachedResultUrl": "https://airtable.com/appaAfOeD82f57tts/tbl1LXA05qiyKUooD"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "job_title": "={{ $json.job_title}}",
+            "company": "={{ $json.company }}",
+            "url": "={{ $json.url }}",
+            "platform": "={{ $json.platform }}",
+            "fit_score": "={{ $json.fit_score }}",
+            "salary_range": "={{ $json.salary_range }}",
+            "missing_skills": "={{ $json.missing_skills }}",
+            "red_flags": "={{ $json.red_flags }}",
+            "ai_summary": "={{ $json.ai_summary }}",
+            "date_found": "={{ new Date($json.date_found).toISOString() }}"
+          },
+          "matchingColumns": [
+            "url"
+          ],
+          "schema": [
+            {
+              "id": "job_title",
+              "displayName": "job_title",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "company",
+              "displayName": "company",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "platform",
+              "displayName": "platform",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "url",
+              "displayName": "url",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "salary_range",
+              "displayName": "salary_range",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "location",
+              "displayName": "location",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "fit_score",
+              "displayName": "fit_score",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "missing_skills",
+              "displayName": "missing_skills",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "red_flags",
+              "displayName": "red_flags",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "date_found",
+              "displayName": "date_found",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "dateTime",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "status",
+              "displayName": "status",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [],
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "ai_summary",
+              "displayName": "ai_summary",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        2032,
+        96
+      ],
+      "id": "b5286db9-a1aa-4957-9a12-5a5f1d3c8043",
+      "name": "Archive",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "vIR39ldQF4M6NzqZ",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const job = $input.item.json;\n\n// Strip HTML tags from description\nconst cleanDesc = (job.description || '')\n  .replace(/<[^>]*>/g, ' ')\n  .replace(/\\s+/g, ' ')\n  .replace(/[^\\x20-\\x7E]/g, '')\n  .trim()\n  .substring(0, 800);\n\nconst skills = job.skills.map(s => s.skill).join(', ');\nconst company = (job.postedCompany?.name || 'Unknown').replace(/\"/g, '');\nconst title = (job.title || '').replace(/\"/g, '');\nconst salaryMin = job.salary?.minimum || 0;\nconst salaryMax = job.salary?.maximum || 0;\nconst minExp = job.minimumYearsExperience || 0;\n\n// Build the complete API request body as a proper object\nconst requestBody = {\n  model: \"claude-sonnet-4-5\",\n  max_tokens: 1024,\n  messages: [\n    {\n      role: \"user\",\n      content: `You are a job fit analyser. Score this job and return ONLY valid JSON with no markdown fences.\\n\\nCANDIDATE: Python, SQL, n8n workflow automation, Claude API, multi-agent systems, prompt engineering, ESG data domain expertise, prefers backend independent work and building automation tools, avoids heavy presentations and stakeholder management, minimum acceptable salary SGD 3500, has 5+ years ops/data experience so entry requirements under 5 years are fine.\\n\\nJOB: Title: ${title}, Company: ${company}, Salary: SGD ${salaryMin}-${salaryMax}, Min Experience: ${minExp} years, Skills: ${skills}, Description: ${cleanDesc}\\n\\nReturn ONLY: {\"fit_score\":<1-10>,\"salary_range\":\"SGD ${salaryMin}-${salaryMax}\",\"missing_skills\":\"<list or None>\",\"red_flags\":\"<concerns or None>\",\"ai_summary\":\"<2 sentences>\"}`\n    }\n  ]\n};\n\nreturn {\n  json: {\n    ...job,\n    request_body: requestBody\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1232,
+        112
+      ],
+      "id": "aa77dbb4-70da-4ad1-96ab-0c2334a6bdd4",
+      "name": "Build Prompt"
+    },
+    {
+      "parameters": {
+        "operation": "search",
+        "base": {
+          "__rl": true,
+          "value": "appaAfOeD82f57tts",
+          "mode": "list",
+          "cachedResultName": "Job Application Tracker",
+          "cachedResultUrl": "https://airtable.com/appaAfOeD82f57tts"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblKf7Y6gmx30WjBD",
+          "mode": "list",
+          "cachedResultName": "Hot Leads",
+          "cachedResultUrl": "https://airtable.com/appaAfOeD82f57tts/tblKf7Y6gmx30WjBD"
+        },
+        "filterByFormula": "IS_SAME({date_found}, TODAY(), 'day')",
+        "returnAll": false,
+        "limit": 10,
+        "options": {},
+        "sort": {
+          "property": [
+            {
+              "field": "fit_score",
+              "direction": "desc"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        1216,
+        -272
+      ],
+      "id": "0146ac83-bb2a-487c-8759-d0c822067a9a",
+      "name": "Fetch Hot Lead",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "vIR39ldQF4M6NzqZ",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const records = $input.all().slice(0, 10);\n\nif (records.length === 0) {\n  return {\n    json: {\n      subject: \"Job Tracker: No new Hot Leads today\",\n      body: \"<p>No jobs scored 7 or above today. Check back tomorrow!</p>\"\n    }\n  };\n}\n\nlet rows = '';\nfor (const record of records) {\n  const f = record.json.fields;\n  rows += `\n    <tr>\n      <td style=\"padding:8px;border:1px solid #e5e7eb;\">\n        <a href=\"${f.url}\" style=\"color:#1D4ED8;font-weight:bold;\">\n          ${f.job_title}\n        </a>\n      </td>\n      <td style=\"padding:8px;border:1px solid #e5e7eb;\">${f.company}</td>\n      <td style=\"padding:8px;border:1px solid #e5e7eb;text-align:center;\">\n        <strong style=\"color:#166534;\">${f.fit_score}/10</strong>\n      </td>\n      <td style=\"padding:8px;border:1px solid #e5e7eb;\">${f.salary_range}</td>\n      <td style=\"padding:8px;border:1px solid #e5e7eb;color:#6B7280;font-size:13px;\">\n        ${f.ai_summary}\n      </td>\n    </tr>\n  `;\n}\n\nconst body = `\n<div style=\"font-family:Arial,sans-serif;max-width:900px;margin:0 auto;\">\n  <div style=\"background:#1F2937;padding:24px;border-radius:8px 8px 0 0;\">\n    <h1 style=\"color:white;margin:0;font-size:22px;\">\n      🎯 Daily Job Digest\n    </h1>\n    <p style=\"color:#9CA3AF;margin:8px 0 0;\">\n      ${records.length} Hot Lead${records.length > 1 ? 's' : ''} found today · ${new Date().toDateString()}\n    </p>\n  </div>\n  <div style=\"padding:24px;background:#F9FAFB;border-radius:0 0 8px 8px;\">\n    <table style=\"width:100%;border-collapse:collapse;background:white;border-radius:8px;overflow:hidden;\">\n      <thead>\n        <tr style=\"background:#1D4ED8;color:white;\">\n          <th style=\"padding:10px 8px;text-align:left;\">Role</th>\n          <th style=\"padding:10px 8px;text-align:left;\">Company</th>\n          <th style=\"padding:10px 8px;text-align:center;\">Score</th>\n          <th style=\"padding:10px 8px;text-align:left;\">Salary</th>\n          <th style=\"padding:10px 8px;text-align:left;\">AI Summary</th>\n        </tr>\n      </thead>\n      <tbody>${rows}</tbody>\n    </table>\n    <p style=\"color:#6B7280;font-size:13px;margin-top:16px;\">\n      View full details and update status in \n      <a href=\"https://airtable.com\" style=\"color:#1D4ED8;\">Airtable</a>\n    </p>\n  </div>\n</div>\n`;\n\nreturn {\n  json: {\n    subject: `🎯 ${records.length} New Job Lead${records.length > 1 ? 's' : ''} Today — ${new Date().toDateString()}`,\n    body: body\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1424,
+        -272
+      ],
+      "id": "c7edad16-f1b1-4734-be83-2947c2eaeb6c",
+      "name": "Build Email"
+    },
+    {
+      "parameters": {
+        "sendTo": "ey.yuenwei@gmail.com",
+        "subject": "={{ $json.subject }}",
+        "message": "={{ $json.body }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1632,
+        -272
+      ],
+      "id": "81c7141c-03a5-4829-9d80-192099329ec3",
+      "name": "Send a message",
+      "webhookId": "b9e5fff4-09f5-4058-823d-831452af43e9",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "Rax5hlxqrlXsRg6t",
+          "name": "Gmail OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -592,
+        272
+      ],
+      "id": "41d3079a-1851-469b-9a10-2d1c717949a0",
+      "name": "When clicking ‘Execute workflow’"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "HTTP Request 1": {
+      "main": [
+        [
+          {
+            "node": "Split Out 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request 2": {
+      "main": [
+        [
+          {
+            "node": "Split Out 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request 3": {
+      "main": [
+        [
+          {
+            "node": "Split Out 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request 4": {
+      "main": [
+        [
+          {
+            "node": "Split Out 4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request 5": {
+      "main": [
+        [
+          {
+            "node": "Split Out 5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out 1": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out 2": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Split Out 3": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Split Out 4": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "Split Out 5": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 4
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Remove Duplicates",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Remove Duplicates": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "node": "Fetch Hot Lead",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Build Prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Scorer": {
+      "main": [
+        [
+          {
+            "node": "Parse AI Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse AI Response": {
+      "main": [
+        [
+          {
+            "node": "Hot Lead Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hot Lead Filter": {
+      "main": [
+        [
+          {
+            "node": "Hot Leads",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Archive",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hot Leads": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Archive": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Prompt": {
+      "main": [
+        [
+          {
+            "node": "AI Scorer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Hot Lead": {
+      "main": [
+        [
+          {
+            "node": "Build Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Email": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request 1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request 2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request 3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request 4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request 5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "bb134815-6e52-4def-9459-2d9b27d69bda",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "3a017e3003c0afad65be62c60060da0015acccce75c746baae66453474e2b2d9"
+  },
+  "id": "4I7Yz27T2DoVjXGE",
+  "tags": []
+}
