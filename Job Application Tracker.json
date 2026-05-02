@@ -14,211 +14,11 @@
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1.3,
       "position": [
-        -384,
-        -32
+        -816,
+        128
       ],
       "id": "7f047e36-143e-461a-aa7f-30661b5e07b2",
       "name": "Schedule Trigger"
-    },
-    {
-      "parameters": {
-        "url": "https://api.mycareersfuture.gov.sg/v2/jobs",
-        "sendQuery": true,
-        "queryParameters": {
-          "parameters": [
-            {
-              "name": "search",
-              "value": "automation analyst"
-            },
-            {
-              "name": "limit",
-              "value": "20"
-            },
-            {
-              "name": "sortBy",
-              "value": "new_posting_date"
-            }
-          ]
-        },
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Content-Type",
-              "value": "application/json"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.4,
-      "position": [
-        -64,
-        -384
-      ],
-      "id": "90adeae9-1d9d-4bbd-9f0d-c4403a4ed78c",
-      "name": "HTTP Request 1"
-    },
-    {
-      "parameters": {
-        "url": "https://api.mycareersfuture.gov.sg/v2/jobs",
-        "sendQuery": true,
-        "queryParameters": {
-          "parameters": [
-            {
-              "name": "search",
-              "value": "AI engineer"
-            },
-            {
-              "name": "limit",
-              "value": "20"
-            },
-            {
-              "name": "sortBy",
-              "value": "new_posting_date"
-            }
-          ]
-        },
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Content-Type",
-              "value": "application/json"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.4,
-      "position": [
-        -80,
-        -208
-      ],
-      "id": "f4deb670-a929-4cdb-9cbc-ddcfd92ec468",
-      "name": "HTTP Request 2"
-    },
-    {
-      "parameters": {
-        "url": "https://api.mycareersfuture.gov.sg/v2/jobs",
-        "sendQuery": true,
-        "queryParameters": {
-          "parameters": [
-            {
-              "name": "search",
-              "value": "AI automation"
-            },
-            {
-              "name": "limit",
-              "value": "20"
-            },
-            {
-              "name": "sortBy",
-              "value": "new_posting_date"
-            }
-          ]
-        },
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Content-Type",
-              "value": "application/json"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.4,
-      "position": [
-        -96,
-        -16
-      ],
-      "id": "03a6bc14-cb69-4cd3-a4da-065cc8e55e89",
-      "name": "HTTP Request 3"
-    },
-    {
-      "parameters": {
-        "url": "https://api.mycareersfuture.gov.sg/v2/jobs",
-        "sendQuery": true,
-        "queryParameters": {
-          "parameters": [
-            {
-              "name": "search",
-              "value": "process automation"
-            },
-            {
-              "name": "limit",
-              "value": "20"
-            },
-            {
-              "name": "sortBy",
-              "value": "new_posting_date"
-            }
-          ]
-        },
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Content-Type",
-              "value": "application/json"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.4,
-      "position": [
-        -96,
-        176
-      ],
-      "id": "3bbbd52e-193e-4387-9173-83cc5ceae6a0",
-      "name": "HTTP Request 4"
-    },
-    {
-      "parameters": {
-        "url": "https://api.mycareersfuture.gov.sg/v2/jobs",
-        "sendQuery": true,
-        "queryParameters": {
-          "parameters": [
-            {
-              "name": "search",
-              "value": "data operations"
-            },
-            {
-              "name": "limit",
-              "value": "20"
-            },
-            {
-              "name": "sortBy",
-              "value": "new_posting_date"
-            }
-          ]
-        },
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Content-Type",
-              "value": "application/json"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.4,
-      "position": [
-        -96,
-        368
-      ],
-      "id": "d8dc51b7-48e6-406f-8fec-db7431cbc9d7",
-      "name": "HTTP Request 5"
     },
     {
       "parameters": {
@@ -228,8 +28,8 @@
       "type": "n8n-nodes-base.splitOut",
       "typeVersion": 1,
       "position": [
-        144,
-        -384
+        -128,
+        -576
       ],
       "id": "e8a16354-e8ec-492b-9e0a-8551d63407a1",
       "name": "Split Out 1"
@@ -242,8 +42,8 @@
       "type": "n8n-nodes-base.splitOut",
       "typeVersion": 1,
       "position": [
-        160,
-        -208
+        -112,
+        -400
       ],
       "id": "ca6b9c25-b667-42a7-8dd5-3f7b90c7ce8a",
       "name": "Split Out 2"
@@ -256,8 +56,8 @@
       "type": "n8n-nodes-base.splitOut",
       "typeVersion": 1,
       "position": [
-        160,
-        -16
+        -112,
+        -208
       ],
       "id": "e549f9c3-f2d8-455b-ab95-75cde8da142a",
       "name": "Split Out 3"
@@ -270,35 +70,21 @@
       "type": "n8n-nodes-base.splitOut",
       "typeVersion": 1,
       "position": [
-        144,
-        176
+        -128,
+        -16
       ],
       "id": "976f8924-e7cb-4276-ba4e-3da25e1a0127",
       "name": "Split Out 4"
     },
     {
       "parameters": {
-        "fieldToSplitOut": "results",
-        "options": {}
-      },
-      "type": "n8n-nodes-base.splitOut",
-      "typeVersion": 1,
-      "position": [
-        160,
-        368
-      ],
-      "id": "bc0fa7dd-51b8-4317-88e0-e242ff246cb2",
-      "name": "Split Out 5"
-    },
-    {
-      "parameters": {
-        "numberInputs": 5
+        "numberInputs": 8
       },
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2,
       "position": [
-        512,
-        -32
+        768,
+        -16
       ],
       "id": "c1390d85-c86f-44f1-9255-16f3537bc034",
       "name": "Merge"
@@ -306,14 +92,14 @@
     {
       "parameters": {
         "compare": "selectedFields",
-        "fieldsToCompare": "uuid",
+        "fieldsToCompare": "metadata.jobDetailsUrl",
         "options": {}
       },
       "type": "n8n-nodes-base.removeDuplicates",
       "typeVersion": 2,
       "position": [
-        720,
-        16
+        976,
+        64
       ],
       "id": "272d6dca-325a-4b39-ad5f-c63f06461f10",
       "name": "Remove Duplicates"
@@ -325,8 +111,8 @@
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3,
       "position": [
-        992,
-        16
+        1216,
+        64
       ],
       "id": "7a460290-a12b-4b74-b925-36e58e3c49b1",
       "name": "Loop Over Items"
@@ -358,8 +144,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.4,
       "position": [
-        1440,
-        96
+        1664,
+        144
       ],
       "id": "102ebfd3-9893-433c-b792-7ef513e449df",
       "name": "AI Scorer",
@@ -372,13 +158,13 @@
     },
     {
       "parameters": {
-        "jsCode": "const content = $input.item.json.content[0].text;\n\n// Remove markdown fences if present\nlet cleaned = content.trim();\nif (cleaned.startsWith(\"```\")) {\n  cleaned = cleaned.replace(/```json\\n?/g, '').replace(/```\\n?/g, '').trim();\n}\n\n// Parse the JSON\nconst parsed = JSON.parse(cleaned);\n\n// Merge with original job data from two steps back\nconst jobData = $('Loop Over Items').item.json;\n\nreturn {\n  json: {\n    job_title: jobData.title,\n    company: jobData.postedCompany?.name || 'Unknown',\n    url: jobData.metadata?.jobDetailsUrl || '',\n    platform: 'MyCareersFuture',\n    date_found: new Date().toISOString().split('T')[0],\n    fit_score: parsed.fit_score,\n    salary_range: parsed.salary_range,\n    missing_skills: parsed.missing_skills,\n    red_flags: parsed.red_flags,\n    ai_summary: parsed.ai_summary\n  }\n};"
+        "jsCode": "const content = $input.item.json.content[0].text;\nlet cleaned = content.trim();\n\n// Find the JSON object within the response\nconst jsonStart = cleaned.indexOf('{');\nconst jsonEnd = cleaned.lastIndexOf('}');\n\nconst jobData = $('Loop Over Items').item.json;\n\nif (jsonStart === -1 || jsonEnd === -1) {\n  return {\n    json: {\n      job_title: jobData.title,\n      company: jobData.postedCompany?.name || 'Unknown',\n      url: jobData.metadata?.jobDetailsUrl || '',\n      platform: 'MyCareersFuture',\n      date_found: new Date().toISOString().split('T')[0],\n      fit_score: 1,\n      salary_range: `SGD ${jobData.salary?.minimum}-${jobData.salary?.maximum}`,\n      missing_skills: 'Parse error',\n      red_flags: 'Claude returned non-JSON response',\n      ai_summary: 'Could not parse AI response for this role'\n    }\n  };\n}\n\ncleaned = cleaned.substring(jsonStart, jsonEnd + 1);\nconst parsed = JSON.parse(cleaned);\n\nreturn {\n  json: {\n    job_title: jobData.title,\n    company: jobData.postedCompany?.name || 'Unknown',\n    url: jobData.metadata?.jobDetailsUrl || '',\n    platform: jobData.source || 'MyCareersFuture',\n    date_found: new Date().toISOString().split('T')[0],\n    fit_score: parsed.fit_score,\n    salary_range: parsed.salary_range,\n    missing_skills: parsed.missing_skills,\n    red_flags: parsed.red_flags,\n    ai_summary: parsed.ai_summary\n  }\n};"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1648,
-        16
+        1872,
+        64
       ],
       "id": "952f69b8-fda0-4e98-b78d-e2882a17bb55",
       "name": "Parse AI Response"
@@ -410,8 +196,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.3,
       "position": [
-        1840,
-        -16
+        2064,
+        32
       ],
       "id": "70b432e6-fb9c-41b0-a6dc-cb2378d8102c",
       "name": "Hot Lead Filter"
@@ -593,8 +379,8 @@
       "type": "n8n-nodes-base.airtable",
       "typeVersion": 2.2,
       "position": [
-        2112,
-        -256
+        2336,
+        -208
       ],
       "id": "0aa12214-efcf-4ae6-87fa-09a21ed8e2e3",
       "name": "Hot Leads",
@@ -782,8 +568,8 @@
       "type": "n8n-nodes-base.airtable",
       "typeVersion": 2.2,
       "position": [
-        2032,
-        96
+        2256,
+        144
       ],
       "id": "b5286db9-a1aa-4957-9a12-5a5f1d3c8043",
       "name": "Archive",
@@ -796,13 +582,13 @@
     },
     {
       "parameters": {
-        "jsCode": "const job = $input.item.json;\n\n// Strip HTML tags from description\nconst cleanDesc = (job.description || '')\n  .replace(/<[^>]*>/g, ' ')\n  .replace(/\\s+/g, ' ')\n  .replace(/[^\\x20-\\x7E]/g, '')\n  .trim()\n  .substring(0, 800);\n\nconst skills = job.skills.map(s => s.skill).join(', ');\nconst company = (job.postedCompany?.name || 'Unknown').replace(/\"/g, '');\nconst title = (job.title || '').replace(/\"/g, '');\nconst salaryMin = job.salary?.minimum || 0;\nconst salaryMax = job.salary?.maximum || 0;\nconst minExp = job.minimumYearsExperience || 0;\n\n// Build the complete API request body as a proper object\nconst requestBody = {\n  model: \"claude-sonnet-4-5\",\n  max_tokens: 1024,\n  messages: [\n    {\n      role: \"user\",\n      content: `You are a job fit analyser. Score this job and return ONLY valid JSON with no markdown fences.\\n\\nCANDIDATE: Python, SQL, n8n workflow automation, Claude API, multi-agent systems, prompt engineering, ESG data domain expertise, prefers backend independent work and building automation tools, avoids heavy presentations and stakeholder management, minimum acceptable salary SGD 3500, has 5+ years ops/data experience so entry requirements under 5 years are fine.\\n\\nJOB: Title: ${title}, Company: ${company}, Salary: SGD ${salaryMin}-${salaryMax}, Min Experience: ${minExp} years, Skills: ${skills}, Description: ${cleanDesc}\\n\\nReturn ONLY: {\"fit_score\":<1-10>,\"salary_range\":\"SGD ${salaryMin}-${salaryMax}\",\"missing_skills\":\"<list or None>\",\"red_flags\":\"<concerns or None>\",\"ai_summary\":\"<2 sentences>\"}`\n    }\n  ]\n};\n\nreturn {\n  json: {\n    ...job,\n    request_body: requestBody\n  }\n};"
+        "jsCode": "const job = $input.item.json;\n\nconst cleanDesc = (job.description || '')\n  .replace(/<[^>]*>/g, ' ')\n  .replace(/\\s+/g, ' ')\n  .replace(/[^\\x20-\\x7E]/g, '')\n  .trim()\n  .substring(0, 800);\n\nconst skills = job.skills.map(s => s.skill).join(', ');\nconst company = (job.postedCompany?.name || 'Unknown').replace(/\"/g, '');\nconst title = (job.title || '').replace(/\"/g, '');\nconst salaryMin = job.salary?.minimum || 0;\nconst salaryMax = job.salary?.maximum || 0;\nconst minExp = job.minimumYearsExperience || 0;\nconst appCount = job.metadata?.totalNumberJobApplication || 999;\n\nconst requestBody = {\n  model: \"claude-sonnet-4-5\",\n  max_tokens: 1024,\n  messages: [\n    {\n      role: \"user\",\n      content: `Return ONLY a valid JSON object. Your entire response must start with { and end with }. No explanations, no text outside the JSON.\n\nCANDIDATE PROFILE:\nSkills: Python, SQL, n8n workflow automation, Claude API, multi-agent systems, prompt engineering, ESG data domain expertise, data validation, ETL pipelines, Excel, Tableau\nPreferences: backend independent work, building automation tools, minimal presentations and stakeholder management\nExperience: 4+ years operations/data, currently ESG data associate\nMinimum acceptable salary: SGD 3,500\n\nSCORING RULES:\nStart with a base score 1-10 based on overall fit.\n\nAUTOMATIC BONUS POINTS (add to base score, max score is 10):\n+2 points if role mentions ANY of: Anthropic API, Claude API, Claude Code, MCP, Model Context Protocol, multi-agent systems, agentic workflows, RAG pipelines, prompt engineering, LangChain, n8n, Make.com as primary tools\n+1 point if role says \"fresh graduates welcome\" or \"no experience required\" or minimum experience is 0-1 years\n\nIMPORTANT OVERRIDE RULE:\nIf the role's PRIMARY responsibilities involve building with Anthropic API, Claude API, Claude Code, MCP, multi-agent systems, RAG pipelines, or prompt engineering, the minimum score must be 7. If these are mentioned only incidentally, as a single bullet point, or in a job title but not reflected in the actual responsibilities, do NOT apply the minimum override.\n\nHEAVY PENALTIES (subtract from base score):\n-3 points if role is primarily IT helpdesk, IT infrastructure support, or network administration\n-2 points if role is contract under 12 months\n-2 points if salary ceiling is below SGD 4,000\n-2 points if role requires 5+ years ML engineering or deep learning research\n-2 points if role requires Java, .NET, or C# as primary language\n\nBOOST FACTORS (add to base score):\n+1 point if role is permanent (not contract)\n+1 point if total applications are under 30\n\nJOB LISTING:\nTitle: ${title}\nCompany: ${company}\nSalary: SGD ${salaryMin}-${salaryMax}\nSkills Required: ${skills}\nMin Years Experience: ${minExp} years\nTotal Applications: ${appCount}\nDescription: ${cleanDesc}\n\nReturn ONLY this JSON with no markdown:\n{\"fit_score\":<1-10>,\"salary_range\":\"SGD ${salaryMin}-${salaryMax}\",\"missing_skills\":\"<list or None>\",\"red_flags\":\"<concerns or None>\",\"ai_summary\":\"<2 sentences>\"}\n\nCRITICAL: Your response must start with { and end with }. No other text.`\n    }\n  ]\n};\n\nreturn {\n  json: {\n    ...job,\n    request_body: requestBody\n  }\n};"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1232,
-        112
+        1456,
+        160
       ],
       "id": "aa77dbb4-70da-4ad1-96ab-0c2334a6bdd4",
       "name": "Build Prompt"
@@ -824,9 +610,9 @@
           "cachedResultName": "Hot Leads",
           "cachedResultUrl": "https://airtable.com/appaAfOeD82f57tts/tblKf7Y6gmx30WjBD"
         },
-        "filterByFormula": "IS_SAME({date_found}, TODAY(), 'day')",
+        "filterByFormula": "=DATETIME_FORMAT({date_found}, 'YYYY-MM-DD') = DATETIME_FORMAT(TODAY(), 'YYYY-MM-DD')",
         "returnAll": false,
-        "limit": 10,
+        "limit": 50,
         "options": {},
         "sort": {
           "property": [
@@ -840,8 +626,8 @@
       "type": "n8n-nodes-base.airtable",
       "typeVersion": 2.2,
       "position": [
-        1216,
-        -272
+        1440,
+        -224
       ],
       "id": "0146ac83-bb2a-487c-8759-d0c822067a9a",
       "name": "Fetch Hot Lead",
@@ -854,13 +640,13 @@
     },
     {
       "parameters": {
-        "jsCode": "const records = $input.all().slice(0, 10);\n\nif (records.length === 0) {\n  return {\n    json: {\n      subject: \"Job Tracker: No new Hot Leads today\",\n      body: \"<p>No jobs scored 7 or above today. Check back tomorrow!</p>\"\n    }\n  };\n}\n\nlet rows = '';\nfor (const record of records) {\n  const f = record.json.fields;\n  rows += `\n    <tr>\n      <td style=\"padding:8px;border:1px solid #e5e7eb;\">\n        <a href=\"${f.url}\" style=\"color:#1D4ED8;font-weight:bold;\">\n          ${f.job_title}\n        </a>\n      </td>\n      <td style=\"padding:8px;border:1px solid #e5e7eb;\">${f.company}</td>\n      <td style=\"padding:8px;border:1px solid #e5e7eb;text-align:center;\">\n        <strong style=\"color:#166534;\">${f.fit_score}/10</strong>\n      </td>\n      <td style=\"padding:8px;border:1px solid #e5e7eb;\">${f.salary_range}</td>\n      <td style=\"padding:8px;border:1px solid #e5e7eb;color:#6B7280;font-size:13px;\">\n        ${f.ai_summary}\n      </td>\n    </tr>\n  `;\n}\n\nconst body = `\n<div style=\"font-family:Arial,sans-serif;max-width:900px;margin:0 auto;\">\n  <div style=\"background:#1F2937;padding:24px;border-radius:8px 8px 0 0;\">\n    <h1 style=\"color:white;margin:0;font-size:22px;\">\n      🎯 Daily Job Digest\n    </h1>\n    <p style=\"color:#9CA3AF;margin:8px 0 0;\">\n      ${records.length} Hot Lead${records.length > 1 ? 's' : ''} found today · ${new Date().toDateString()}\n    </p>\n  </div>\n  <div style=\"padding:24px;background:#F9FAFB;border-radius:0 0 8px 8px;\">\n    <table style=\"width:100%;border-collapse:collapse;background:white;border-radius:8px;overflow:hidden;\">\n      <thead>\n        <tr style=\"background:#1D4ED8;color:white;\">\n          <th style=\"padding:10px 8px;text-align:left;\">Role</th>\n          <th style=\"padding:10px 8px;text-align:left;\">Company</th>\n          <th style=\"padding:10px 8px;text-align:center;\">Score</th>\n          <th style=\"padding:10px 8px;text-align:left;\">Salary</th>\n          <th style=\"padding:10px 8px;text-align:left;\">AI Summary</th>\n        </tr>\n      </thead>\n      <tbody>${rows}</tbody>\n    </table>\n    <p style=\"color:#6B7280;font-size:13px;margin-top:16px;\">\n      View full details and update status in \n      <a href=\"https://airtable.com\" style=\"color:#1D4ED8;\">Airtable</a>\n    </p>\n  </div>\n</div>\n`;\n\nreturn {\n  json: {\n    subject: `🎯 ${records.length} New Job Lead${records.length > 1 ? 's' : ''} Today — ${new Date().toDateString()}`,\n    body: body\n  }\n};"
+        "jsCode": "const allRecords = $input.all().slice(0, 50);\n\n// Keep only highest scored role per company\nconst seen = new Map();\nconst deduped = [];\nfor (const r of allRecords) {\n  const company = r.json.fields?.company || r.json.company;\n  if (!seen.has(company)) {\n    seen.set(company, true);\n    deduped.push(r);\n  }\n}\n\n// Take top 10 after deduplication\nconst records = deduped.slice(0, 10);\n\nif (records.length === 0) {\n  return {\n    json: {\n      subject: \"Job Tracker: No new Hot Leads today\",\n      body: \"<p>No jobs scored 7 or above today. Check back tomorrow!</p>\"\n    }\n  };\n}\n\nlet rows = '';\nfor (const record of records) {\n  const f = record.json.fields;\n  rows += `\n    <tr>\n      <td style=\"padding:8px;border:1px solid #e5e7eb;\">\n        <a href=\"${f.url}\" style=\"color:#1D4ED8;font-weight:bold;\">\n          ${f.job_title}\n        </a>\n      </td>\n      <td style=\"padding:8px;border:1px solid #e5e7eb;\">${f.company}</td>\n      <td style=\"padding:8px;border:1px solid #e5e7eb;text-align:center;\">\n        <strong style=\"color:#166534;\">${f.fit_score}/10</strong>\n      </td>\n      <td style=\"padding:8px;border:1px solid #e5e7eb;\">${f.salary_range}</td>\n      <td style=\"padding:8px;border:1px solid #e5e7eb;color:#6B7280;font-size:13px;\">\n        ${f.ai_summary}\n      </td>\n    </tr>\n  `;\n}\n\nconst body = `\n<div style=\"font-family:Arial,sans-serif;max-width:900px;margin:0 auto;\">\n  <div style=\"background:#1F2937;padding:24px;border-radius:8px 8px 0 0;\">\n    <h1 style=\"color:white;margin:0;font-size:22px;\">\n      🎯 Daily Job Digest\n    </h1>\n    <p style=\"color:#9CA3AF;margin:8px 0 0;\">\n      ${records.length} Hot Leads found today · ${new Date().toDateString()}\n    </p>\n  </div>\n  <div style=\"padding:24px;background:#F9FAFB;border-radius:0 0 8px 8px;\">\n    <table style=\"width:100%;border-collapse:collapse;background:white;border-radius:8px;overflow:hidden;\">\n      <thead>\n        <tr style=\"background:#1D4ED8;color:white;\">\n          <th style=\"padding:10px 8px;text-align:left;\">Role</th>\n          <th style=\"padding:10px 8px;text-align:left;\">Company</th>\n          <th style=\"padding:10px 8px;text-align:center;\">Score</th>\n          <th style=\"padding:10px 8px;text-align:left;\">Salary</th>\n          <th style=\"padding:10px 8px;text-align:left;\">AI Summary</th>\n        </tr>\n      </thead>\n      <tbody>${rows}</tbody>\n    </table>\n    <p style=\"color:#6B7280;font-size:13px;margin-top:16px;\">\n      View full details and update status in \n      <a href=\"https://airtable.com\" style=\"color:#1D4ED8;\">Airtable</a>\n    </p>\n  </div>\n</div>\n`;\n\nreturn {\n  json: {\n    subject: `🎯 ${records.length} New Job Leads Today — ${new Date().toDateString()}`,\n    body: body\n  }\n};"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1424,
-        -272
+        1648,
+        -224
       ],
       "id": "c7edad16-f1b1-4734-be83-2947c2eaeb6c",
       "name": "Build Email"
@@ -875,8 +661,8 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.2,
       "position": [
-        1632,
-        -272
+        1856,
+        -224
       ],
       "id": "81c7141c-03a5-4829-9d80-192099329ec3",
       "name": "Send a message",
@@ -889,11 +675,643 @@
       }
     },
     {
+      "parameters": {
+        "url": "https://jsearch.p.rapidapi.com/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "automation analyst Singapore"
+            },
+            {
+              "name": "page",
+              "value": "1"
+            },
+            {
+              "name": "num_pages",
+              "value": "1"
+            },
+            {
+              "name": "date_posted",
+              "value": "3days"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-RapidAPI-Key",
+              "value": "5386122692msh9486a3780cda46ap101df8jsn67275f099ee0"
+            },
+            {
+              "name": "X-RapidAPI-Host",
+              "value": "jsearch.p.rapidapi.com"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        -384,
+        192
+      ],
+      "id": "c3240965-e2fa-4016-b093-4b33a0d8a7dc",
+      "name": "JSearch 1"
+    },
+    {
+      "parameters": {
+        "url": "https://api.mycareersfuture.gov.sg/v2/jobs",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "search",
+              "value": "automation analyst"
+            },
+            {
+              "name": "limit",
+              "value": "20"
+            },
+            {
+              "name": "sortBy",
+              "value": "new_posting_date"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        -336,
+        -576
+      ],
+      "id": "90adeae9-1d9d-4bbd-9f0d-c4403a4ed78c",
+      "name": "MyCareersFuture 1"
+    },
+    {
+      "parameters": {
+        "url": "https://api.mycareersfuture.gov.sg/v2/jobs",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "search",
+              "value": "AI engineer"
+            },
+            {
+              "name": "limit",
+              "value": "20"
+            },
+            {
+              "name": "sortBy",
+              "value": "new_posting_date"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        -352,
+        -400
+      ],
+      "id": "f4deb670-a929-4cdb-9cbc-ddcfd92ec468",
+      "name": "MyCareersFuture 2"
+    },
+    {
+      "parameters": {
+        "url": "https://api.mycareersfuture.gov.sg/v2/jobs",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "search",
+              "value": "AI automation"
+            },
+            {
+              "name": "limit",
+              "value": "20"
+            },
+            {
+              "name": "sortBy",
+              "value": "new_posting_date"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        -368,
+        -208
+      ],
+      "id": "03a6bc14-cb69-4cd3-a4da-065cc8e55e89",
+      "name": "MyCareersFuture 3"
+    },
+    {
+      "parameters": {
+        "url": "https://api.mycareersfuture.gov.sg/v2/jobs",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "search",
+              "value": "process automation"
+            },
+            {
+              "name": "limit",
+              "value": "20"
+            },
+            {
+              "name": "sortBy",
+              "value": "new_posting_date"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        -368,
+        -16
+      ],
+      "id": "3bbbd52e-193e-4387-9173-83cc5ceae6a0",
+      "name": "MyCareersFuture 4"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -144,
+        192
+      ],
+      "id": "1e535ea5-78c2-40e8-99ba-2be647d404e7",
+      "name": "Split Out 5"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const job = $input.item.json;\n\nreturn {\n  json: {\n    title: job.job_title || 'Unknown',\n    description: job.job_description || '',\n    postedCompany: {\n      name: job.employer_name || 'Unknown'\n    },\n    metadata: {\n      jobDetailsUrl: job.job_apply_link || job.job_google_link || '',\n      newPostingDate: job.job_posted_at_datetime_utc?.split('T')[0] || '',\n      totalNumberJobApplication: 999\n    },\n    salary: {\n      minimum: job.job_min_salary || 0,\n      maximum: job.job_max_salary || 0\n    },\n    minimumYearsExperience: 0,\n    skills: [],\n    source: 'JSearch',\n    source_platform: (job.job_publisher || '').toLowerCase()  // ← add this line\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        80,
+        208
+      ],
+      "id": "e5e50b6d-245d-48ef-a286-632e6d02d4f0",
+      "name": "Normalise JSearch 1"
+    },
+    {
+      "parameters": {
+        "url": "https://jsearch.p.rapidapi.com/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "AI engineer Singapore"
+            },
+            {
+              "name": "page",
+              "value": "1"
+            },
+            {
+              "name": "num_pages",
+              "value": "1"
+            },
+            {
+              "name": "date_posted",
+              "value": "3days"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-RapidAPI-Key",
+              "value": "5386122692msh9486a3780cda46ap101df8jsn67275f099ee0"
+            },
+            {
+              "name": "X-RapidAPI-Host",
+              "value": "jsearch.p.rapidapi.com"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        -384,
+        384
+      ],
+      "id": "6202627e-bef5-470c-8606-496074df98e7",
+      "name": "JSearch 2"
+    },
+    {
+      "parameters": {
+        "url": "https://jsearch.p.rapidapi.com/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "AI automation Singapore"
+            },
+            {
+              "name": "page",
+              "value": "1"
+            },
+            {
+              "name": "num_pages",
+              "value": "1"
+            },
+            {
+              "name": "date_posted",
+              "value": "3days"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-RapidAPI-Key",
+              "value": "5386122692msh9486a3780cda46ap101df8jsn67275f099ee0"
+            },
+            {
+              "name": "X-RapidAPI-Host",
+              "value": "jsearch.p.rapidapi.com"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        -384,
+        576
+      ],
+      "id": "19057db7-0786-4104-84b2-3d79c38e65bb",
+      "name": "JSearch 3"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        384
+      ],
+      "id": "3effc617-0958-4b4c-ac7a-e24a5e3447d8",
+      "name": "Split Out 6"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        576
+      ],
+      "id": "41bbacd3-7026-4df3-9f74-efcde6a471d3",
+      "name": "Split Out 7"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const job = $input.item.json;\n\nreturn {\n  json: {\n    title: job.job_title || 'Unknown',\n    description: job.job_description || '',\n    postedCompany: {\n      name: job.employer_name || 'Unknown'\n    },\n    metadata: {\n      jobDetailsUrl: job.job_apply_link || job.job_google_link || '',\n      newPostingDate: job.job_posted_at_datetime_utc?.split('T')[0] || '',\n      totalNumberJobApplication: 999\n    },\n    salary: {\n      minimum: job.job_min_salary || 0,\n      maximum: job.job_max_salary || 0\n    },\n    minimumYearsExperience: 0,\n    skills: [],\n    source: 'JSearch',\n    source_platform: (job.job_publisher || '').toLowerCase()  // ← add this line\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        64,
+        384
+      ],
+      "id": "9be8b396-0162-4c29-8cab-d53d0dd2af54",
+      "name": "Normalise JSearch 2"
+    },
+    {
+      "parameters": {
+        "url": "https://jsearch.p.rapidapi.com/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "process automation Singapore"
+            },
+            {
+              "name": "page",
+              "value": "1"
+            },
+            {
+              "name": "num_pages",
+              "value": "1"
+            },
+            {
+              "name": "date_posted",
+              "value": "3days"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-RapidAPI-Key",
+              "value": "5386122692msh9486a3780cda46ap101df8jsn67275f099ee0"
+            },
+            {
+              "name": "X-RapidAPI-Host",
+              "value": "jsearch.p.rapidapi.com"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        -384,
+        768
+      ],
+      "id": "c70a2fa5-0f79-49f0-ac54-29777f00ee07",
+      "name": "JSearch 4"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -176,
+        768
+      ],
+      "id": "92f05dc1-b23e-4cfa-b640-b2294c921402",
+      "name": "Split Out 8"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const job = $input.item.json;\n\nreturn {\n  json: {\n    title: job.job_title || 'Unknown',\n    description: job.job_description || '',\n    postedCompany: {\n      name: job.employer_name || 'Unknown'\n    },\n    metadata: {\n      jobDetailsUrl: job.job_apply_link || job.job_google_link || '',\n      newPostingDate: job.job_posted_at_datetime_utc?.split('T')[0] || '',\n      totalNumberJobApplication: 999\n    },\n    salary: {\n      minimum: job.job_min_salary || 0,\n      maximum: job.job_max_salary || 0\n    },\n    minimumYearsExperience: 0,\n    skills: [],\n    source: 'JSearch',\n    source_platform: (job.job_publisher || '').toLowerCase()  // ← add this line\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        64,
+        576
+      ],
+      "id": "97fee903-0786-4c79-bec6-1c38fa84caea",
+      "name": "Normalise JSearch 3"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const job = $input.item.json;\n\nreturn {\n  json: {\n    title: job.job_title || 'Unknown',\n    description: job.job_description || '',\n    postedCompany: {\n      name: job.employer_name || 'Unknown'\n    },\n    metadata: {\n      jobDetailsUrl: job.job_apply_link || job.job_google_link || '',\n      newPostingDate: job.job_posted_at_datetime_utc?.split('T')[0] || '',\n      totalNumberJobApplication: 999\n    },\n    salary: {\n      minimum: job.job_min_salary || 0,\n      maximum: job.job_max_salary || 0\n    },\n    minimumYearsExperience: 0,\n    skills: [],\n    source: 'JSearch',\n    source_platform: (job.job_publisher || '').toLowerCase()  // ← add this line\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        64,
+        768
+      ],
+      "id": "dd0aa110-f9fd-47db-9b8d-9c0c75b999e7",
+      "name": "Normalise JSearch 4"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "8ab566b6-2deb-4491-bb36-2dfb3bb298af",
+              "leftValue": "={{ $json.source_platform }}",
+              "rightValue": "linkedin",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "e48c6eb8-dabf-4a68-a4c6-403dab107fe4",
+              "leftValue": "={{ $json.source_platform }}",
+              "rightValue": "jobstreet",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        272,
+        192
+      ],
+      "id": "6b64b2d9-a51d-4851-a677-930151b950cf",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "8ab566b6-2deb-4491-bb36-2dfb3bb298af",
+              "leftValue": "={{ $json.source_platform }}",
+              "rightValue": "linkedin",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "e48c6eb8-dabf-4a68-a4c6-403dab107fe4",
+              "leftValue": "={{ $json.source_platform }}",
+              "rightValue": "jobstreet",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        272,
+        336
+      ],
+      "id": "fd4d9281-be73-4989-86c2-2ef5116dbc3f",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "8ab566b6-2deb-4491-bb36-2dfb3bb298af",
+              "leftValue": "={{ $json.source_platform }}",
+              "rightValue": "linkedin",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "e48c6eb8-dabf-4a68-a4c6-403dab107fe4",
+              "leftValue": "={{ $json.source_platform }}",
+              "rightValue": "jobstreet",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        272,
+        512
+      ],
+      "id": "99bdceff-8374-4f9c-b171-d09abbf87e4e",
+      "name": "If2"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "8ab566b6-2deb-4491-bb36-2dfb3bb298af",
+              "leftValue": "={{ $json.source_platform }}",
+              "rightValue": "linkedin",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "e48c6eb8-dabf-4a68-a4c6-403dab107fe4",
+              "leftValue": "={{ $json.source_platform }}",
+              "rightValue": "jobstreet",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        288,
+        688
+      ],
+      "id": "1872f5a9-2909-40f4-a99c-702efddc3592",
+      "name": "If3"
+    },
+    {
       "parameters": {},
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
-        -592,
+        -1280,
         272
       ],
       "id": "41d3079a-1851-469b-9a10-2d1c717949a0",
@@ -902,61 +1320,6 @@
   ],
   "pinData": {},
   "connections": {
-    "HTTP Request 1": {
-      "main": [
-        [
-          {
-            "node": "Split Out 1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "HTTP Request 2": {
-      "main": [
-        [
-          {
-            "node": "Split Out 2",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "HTTP Request 3": {
-      "main": [
-        [
-          {
-            "node": "Split Out 3",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "HTTP Request 4": {
-      "main": [
-        [
-          {
-            "node": "Split Out 4",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "HTTP Request 5": {
-      "main": [
-        [
-          {
-            "node": "Split Out 5",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Split Out 1": {
       "main": [
         [
@@ -997,17 +1360,6 @@
             "node": "Merge",
             "type": "main",
             "index": 3
-          }
-        ]
-      ]
-    },
-    "Split Out 5": {
-      "main": [
-        [
-          {
-            "node": "Merge",
-            "type": "main",
-            "index": 4
           }
         ]
       ]
@@ -1151,31 +1503,271 @@
       "main": [
         [
           {
-            "node": "HTTP Request 1",
+            "node": "MyCareersFuture 1",
             "type": "main",
             "index": 0
           },
           {
-            "node": "HTTP Request 2",
+            "node": "MyCareersFuture 2",
             "type": "main",
             "index": 0
           },
           {
-            "node": "HTTP Request 3",
+            "node": "MyCareersFuture 3",
             "type": "main",
             "index": 0
           },
           {
-            "node": "HTTP Request 4",
+            "node": "MyCareersFuture 4",
             "type": "main",
             "index": 0
           },
           {
-            "node": "HTTP Request 5",
+            "node": "JSearch 1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "JSearch 2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "JSearch 3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "JSearch 4",
             "type": "main",
             "index": 0
           }
         ]
+      ]
+    },
+    "JSearch 1": {
+      "main": [
+        [
+          {
+            "node": "Split Out 5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MyCareersFuture 1": {
+      "main": [
+        [
+          {
+            "node": "Split Out 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MyCareersFuture 2": {
+      "main": [
+        [
+          {
+            "node": "Split Out 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MyCareersFuture 3": {
+      "main": [
+        [
+          {
+            "node": "Split Out 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MyCareersFuture 4": {
+      "main": [
+        [
+          {
+            "node": "Split Out 4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out 5": {
+      "main": [
+        [
+          {
+            "node": "Normalise JSearch 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "JSearch 2": {
+      "main": [
+        [
+          {
+            "node": "Split Out 6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "JSearch 3": {
+      "main": [
+        [
+          {
+            "node": "Split Out 7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out 6": {
+      "main": [
+        [
+          {
+            "node": "Normalise JSearch 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out 7": {
+      "main": [
+        [
+          {
+            "node": "Normalise JSearch 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out 8": {
+      "main": [
+        [
+          {
+            "node": "Normalise JSearch 4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "JSearch 4": {
+      "main": [
+        [
+          {
+            "node": "Split Out 8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalise JSearch 2": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalise JSearch 1": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalise JSearch 3": {
+      "main": [
+        [
+          {
+            "node": "If2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalise JSearch 4": {
+      "main": [
+        [
+          {
+            "node": "If3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 4
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 5
+          }
+        ]
+      ]
+    },
+    "If2": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 6
+          }
+        ]
+      ]
+    },
+    "If3": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 7
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        []
       ]
     }
   },
@@ -1184,7 +1776,7 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "bb134815-6e52-4def-9459-2d9b27d69bda",
+  "versionId": "ab17ddfe-cd33-4c4f-8644-fe7f34eb6edb",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "3a017e3003c0afad65be62c60060da0015acccce75c746baae66453474e2b2d9"
