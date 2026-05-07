@@ -180,7 +180,7 @@ LinkedIn and JobStreet actively block scraping. JSearch provides a clean API tha
 The same job listing often appears across multiple search terms (e.g. "AI Engineer" matching both "AI engineer" and "AI automation" searches). Using the job URL as the deduplication key catches these regardless of which search found them.
 
 **Why upsert instead of create?**
-The workflow runs daily. Using Create or Update on the URL field means re-running the workflow updates existing records rather than creating duplicates. The tracker stays clean automatically.
+The workflow runs daily. Using upsert means re-running the workflow updates existing records rather than creating duplicates. The tracker stays clean automatically.
 
 **Why deduplicate by company in the email?**
 Companies often post multiple similar roles. Showing one role per company in the email keeps the digest concise and actionable — the full list is always available in Airtable.
